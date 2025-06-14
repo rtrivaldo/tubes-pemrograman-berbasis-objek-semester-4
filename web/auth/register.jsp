@@ -1,9 +1,3 @@
-<%-- 
-    Document   : register
-    Created on : 11 Jun 2025, 09.07.15
-    Author     : rtriv
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -17,7 +11,12 @@
         <div class="flex flex-col justify-center items-center h-screen">
             <h1 class="text-2xl font-semibold">Register</h1>
             
-            <form class="mt-6 w-1/3">
+            <% String error = (String) request.getAttribute("error"); %>
+            <% if (error != null) { %>
+                <div class="text-red-500 text-sm mb-4"><%= error %></div>
+            <% } %>
+            
+            <form class="mt-6 w-1/3" method="post" action="${pageContext.request.contextPath}/register">
                 <div>
                     <label for="name">Name</label>
                     <input type="text" name="name" id="name" class="mt-1 block border border-gray-300 rounded px-2 py-1 text-sm outline-none w-full" />

@@ -34,4 +34,12 @@ public class Course {
     public List<Assignment> getAssignments() {
         return assignments;
     }
+    
+    public int getId() {
+        return id;
+    }
+    
+    public String getDescription() {
+        return description;
+    }
 }

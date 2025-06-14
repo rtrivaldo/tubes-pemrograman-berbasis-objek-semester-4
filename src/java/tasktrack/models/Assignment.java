@@ -25,11 +25,47 @@ public class Assignment {
         return new Date().after(deadline);
     }
 
+    public int getId() {
+        return id;
+    }
+
     public String getTitle() {
         return title;
     }
 
     public Date getDeadline() {
         return deadline;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public Course getCourse() {
+        return course;
+    }
+
+    public int getCourseId() {
+        return course != null ? course.getId() : 0;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setDeadline(Date deadline) {
+        this.deadline = deadline;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public void setCourse(Course course) {
+        this.course = course;
     }
 }

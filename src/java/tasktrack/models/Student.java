@@ -49,4 +49,24 @@ public class Student extends User {
     public ToDoList getTodoList() {
         return todoList;
     }
+
+    public int getId() {
+       return id;
+    }
+    
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
+    }
+
+    public int getAssignmentsCompleted() {
+        return assignmentsCompleted;
+    }
+
+    public void setAssignmentsCompleted(int completed) {
+        this.assignmentsCompleted = completed;
+    }
 }
